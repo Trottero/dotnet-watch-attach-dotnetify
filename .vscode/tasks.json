@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/testdotnetify.csproj"
+        // "--no-hot-reload"
+      ],
+      "options": {
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "DOTNET_USE_POLLING_FILE_WATCHER": "true"
+        }
+      },
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
